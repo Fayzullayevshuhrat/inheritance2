@@ -1,27 +1,27 @@
 class Clothe:
-    def __init__(self, name,colour,size):
+    def __init__(self, name, colour, size):
         self.name = name
         self.colour = colour
         self.size = size
 
+
 class Shirt(Clothe):
-        super().size()
+    def get_colour(self):
+        print(self.colour)
+    def get_size(self):
+        print(self.size)
 
-
-    def colour(self):
-        print("yellow")
-    def size(self):
-        print(37)
 
 class Jeans(Clothe):
-        super().size()
+    def __init__(self, name, colour, size):
+        super().__init__(name, colour, size)
         print("jeans-coloured")
 
 
-
 sh = Shirt("shirt", "yellow", 37)
-sh.colour()
-sh.size()
+sh.get_colour()
+sh.get_size()
+
 jeans = Jeans("jeans", "black", 37)
-jeans.colour()
-jeans.size()
+print(jeans.colour)
+print(jeans.size)
